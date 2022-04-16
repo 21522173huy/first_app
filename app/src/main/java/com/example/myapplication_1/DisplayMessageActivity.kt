@@ -8,9 +8,9 @@ class DisplayMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_message)
-        val message = intent.getStringArrayExtra(EXTRA_MESSAGE)
+        val message = intent.getStringExtra(EXTRA_MESSAGE)
         val textView = this.findViewById<TextView>(R.id.textView).apply {
-            text = "xyz"
+            text = message.toString()
         }
     }
 }
