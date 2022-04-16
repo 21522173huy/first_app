@@ -13,15 +13,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fun sendmessage(view: View) {
-            val editText =  findViewById<EditText>(R.id.editTextTextPersonName)
-            val message = editText.text.toString()
-            val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, message)
-            }
-            startActivity(intent)
-        }
     }
 
-    fun sendmessage(view: View) {}
+    fun sendmessage(view: View) {
+        val editText =  findViewById<EditText>(R.id.editTextTextPersonName)
+        val message = editText.text.toString()
+        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, message)
+        }
+        startActivity(intent)
+    }
 }
